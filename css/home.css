@@ -5,7 +5,7 @@
 
 .container{
     display: grid;
-    grid-template-rows: 83px 300px 520px 430px 70px;
+    grid-template-rows: 83px 290px 520px 430px 70px;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-areas:
         "header header header" 
@@ -28,7 +28,7 @@ main{
     border-bottom: 3px solid rgb(228, 228, 228);
     overflow: hidden;
     margin-left:7%;
-    margin-top:10px;
+    margin-top:11px;
 }
        
 aside{
@@ -36,7 +36,8 @@ aside{
     width:81%;
     border: 3px solid rgb(228, 228, 228);
     position:relative;
-    margin-top:10px;
+    margin-top:10px;    
+    min-width: 220px;
 }
 
 section{
@@ -80,6 +81,10 @@ a{
     font-size: 25pt;
     font-weight:bolder;
     color: #c20044;
+}
+
+header div {
+    min-width: 300px;
 }
 
 .navbar-menu{
@@ -201,7 +206,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 1.9% 1.5%;
+    margin: 0.4% 1.5%;
+    min-height: 45px;
 }
 
 .main-name > p {
