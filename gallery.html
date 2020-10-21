@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework05-gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div><a href="http://127.0.0.1:5500/index.html" class="navbar-logo">My Home Page</a></div>
+                <ul class="navbar-menu">
+                    <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/gallery.html">Gallery</a></li>
+                    <li><a href="">Login</a></li>
+                    <li id="menu-button">Categories▼</li>
+                </ul>
+            </nav>
+        </header>
+
+        <nav id="side-menu" class="hidden">
+            <ul class="side_menu">
+                <li><a href="#">Calender</a></li>
+                <li><a href="http://127.0.0.1:5500/gallery.html">Gallery</a></li>
+                <li><a href="#">Daily Log</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="main-name">
+                <h3>ChaeJeong's 갤러리</h3>
+            </div>
+            <div class="main-photo">
+                <div class="photo-frame">
+                    <img src="./images/puppy02.jpg" alt="puppy02 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#우리집 강아지 사진 찍은 날 #상큼오렌지</p>
+                    </div>
+                </div>
+                <div class="photo-frame"> 
+                    <div class=" wrapper"> 
+                        <div class="face"></div>
+                        <div class="face"></div>
+                        <div class="face"></div>
+                        <div class="face"></div>
+                        <div class="face"></div>
+                        <div class="face"></div>
+                        <div><p>마우스를 올려보세요.</p></div>
+                    </div>
+                    <div class="text-frame-hover">
+                        <p>2020. XX. XX</p>
+                        <p>#하트0_0 #푸릇푸릇</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/dessert02.jpg" alt="dessert02 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#디저트 맛집 #딸기 파티</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/sunset01.jpg" alt="sunset01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#노을과 함께 #노란 꽃들과 함께</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/bear01.jpg" alt="bear01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#흑백 곰 #휴식 중</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/dessert01.jpg" alt="dessert01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#알록달록 마카롱 먹은 날 #말차맛 최고</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/water01.jpg" alt="puppy03 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#최고의 풍경 #날씨는 약간 흐렸지만 좋았던 날</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/tree01.jpg" alt="tree01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#가을 단풍 파티 #산책로 #힐링타임</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/dessert03.jpg" alt="dessert03 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#집에서 혼자 마카롱 먹기</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/nature01.jpg" alt="nature01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#힐링되는 사진 #아름다운 풍경</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/water02.jpg" alt="heart01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#힐링 여행 #아름다운 건물들</p>
+                    </div>
+                </div>
+                <div class="photo-frame">
+                    <img src="./images/tree02.jpg" alt="puppy01 image">
+                    <div class="text-frame">
+                        <p>2020. XX. XX</p>
+                        <p>#좋은 날에 찍은 큰 나무</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <p>Copyright &copy;2020. All Right Reserved.</p>
+            </div>  
+        </footer>
+    </div>
+
+    <script>
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (hidden) {
+                sideMenu.classList.remove('hidden');
+                hidden = false;
+            }
+            else {
+                sideMenu.classList.add('hidden');
+                hidden = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
