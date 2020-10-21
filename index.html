@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework05-home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div><a href="http://127.0.0.1:5500/index.html" class="navbar-logo">My Home Page</a></div>
+                <ul class="navbar-menu">
+                    <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/gallery.html">Gallery</a></li>
+                    <li><a href="">Login</a></li>
+                    <li id="menu-button">Categories▼</li>
+                </ul>
+            </nav>
+            <div class="header-image">
+                <h4>Lorem Ipsum Dolor Sit...</h4>
+                <p>Lorem ipsum dolor sit amet consectetur. Aut quia repudiandae ea ducimus eum illo rerum cum exercitationem!</p>
+            </div>
+        </header>
+
+        <nav id="side-menu" class="hidden">
+            <ul class="side_menu">
+                <li><a href="#">Calender</a></li>
+                <li><a href="http://127.0.0.1:5500/gallery.html">Gallery</a></li>
+                <li><a href="#">Daily Log</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="main-name">
+                <h2>Main Photo</h2>
+                <p>Show more</p>
+            </div>
+            <div class="main-photo">
+                <div class="main-photo1">
+                    <img src="./images/puppy02.jpg" alt="puppy02 image" class="long-photo">
+                    <p>Lorem ipsum dolor sit amet.</p>  
+                </div>
+                <div class="main-photo2">
+                    <img src="./images/puppy01.jpg" alt="puppy01 image">
+                    <p>Lorem ipsum dolor sit amet.</p>  
+                </div>
+                <div class="main-photo3">
+                    <img src="./images/dessert02.jpg" alt="dessert02 image">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="main-photo4">
+                    <img src="./images/sunset01.jpg" alt="sunset01 image">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="main-photo5">
+                    <img src="./images/bear01.jpg" alt="bear01 image">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="aside-name">
+                <h2>Schedule</h2>
+                <p>Show more</p>
+            </div>
+            <hr class="aside-line">
+            <br>
+            <div class="aside-content">
+                <div>
+                    <p>2020-10-XX</p>
+                    <p>1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod doloribus!</p>
+                </div>
+                <div>
+                    <p>2020-10-XX</p>
+                    <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, animi.</p>
+                    <p>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, exercitationem.</p>
+                </div>
+                <div>
+                    <p>2020-10-XX</p>
+                    <p>1. Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>2. Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>3. Lorem ipsum dolor sit amet consectetur.</p>
+                </div>  
+            </div>
+        </aside>
+
+        <section>
+            <div class="section-content1">
+                <h2>Daily Log1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta minus eos omnis, ipsam velit laudantium blanditiis recusandae. Exercitationem ipsa optio vel mollitia dolore saepe, earum consequatur commodi animi adipisci voluptatibus error sapiente corporis excepturi inventore veniam quod, facilis placeat dolorum, nisi fugit quae. Quasi doloremque laudantium quod asperiores omnis unde cupiditate quos, officia repudiandae. Vitae officiis ea earum expedita sint illo iure itaque minus veniam inventore. Quas ratione debitis incidunt sint, reprehenderit ex veniam rerum dolores magnam quisquam ipsa quae natus velit fugit. Non ullam ea atque impedit cupiditate neque nulla ex, ab et error ratione exercitationem similique mollitia architecto quidem sit sint delectus praesentium odit quibusdam. Autem qui quae dolor aperiam, blanditiis perferendis et pariatur? Labore dignissimos nemo ex voluptatem fugit veniam numquam cumque illum corporis, optio ratione minus sed sint atque empora dolore!</p>  
+            </div>
+            <div class="section-content2">
+                <h2>Daily Log2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta minus eos omnis, ipsam velit laudantium blanditiis recusandae. Exercitationem ipsa optio vel mollitia dolore saepe, earum consequatur commodi animi adipisci voluptatibus error sapiente corporis excepturi inventore veniam quod, facilis placeat dolorum, nisi fugit quae. Quasi doloremque laudantium quod asperiores omnis unde cupiditate quos, officia repudiandae. Vitae officiis ea earum expedita sint illo iure itaque minus veniam inventore. Quas ratione debitis incidunt sint, reprehenderit ex veniam rerum dolores magnam quisquam ipsa quae natus velit fugit. Non ullam ea atque impedit cupiditate neque nulla ex, ab et error ratione exercitationem similique mollitia architecto quidem sit sint delectus praesentium odit quibusdam. Autem qui quae dolor aperiam, blanditiis perferendis et pariatur? Labore dignissimos nemo ex voluptatem fugit veniam numquam cumque illum corporis, optio ratione minus sed sint atque empora dolore!</p>  
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <p>Copyright &copy;2020. All Right Reserved.</p>
+            </div>  
+        </footer>
+    </div>
+
+    <script>
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (hidden) {
+                sideMenu.classList.remove('hidden');
+                hidden = false;
+            }
+            else {
+                sideMenu.classList.add('hidden');
+                hidden = false;
+            }
+        });
+    </script>
+</body>
+</html>
