@@ -82,7 +82,7 @@ a{
     color: #c20044;
 }
 
-header div {
+header > nav div {
     min-width: 300px;
 }
 
