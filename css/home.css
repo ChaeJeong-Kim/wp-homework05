@@ -5,7 +5,7 @@
 
 .container{
     display: grid;
-    grid-template-rows: 83px 290px 520px 430px 70px;
+    grid-template-rows: 83px 320px 520px 430px 70px;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-areas:
         "header header header" 
