@@ -1,6 +1,6 @@
 # HOMEWORK05
 
-## 1. 4주차 과제에서 수정된 것, 추가된 것
+## 1. 4주차 과제에서 수정·추가된 사항
 ---
 ### <수정사항>
 - 홈페이지 테두리 부분의 여백을 제거하였고 홈페이지의 전체적인 너비를 줄였다.
@@ -21,8 +21,7 @@
 - 홈 화면의 헤더이미지 위 글자에 애니메이션을 추가하였다.
 
 
-
-## 2. 수정, 추가 사항에 대한 코드 설명
+## 2. 수정·추가 사항에 대한 코드 설명
 ---
 ### <홈 페이지 코드 설명>
 
@@ -190,14 +189,14 @@
     </div>  
 </div>
 ```
-+ Scedule 부분에서 .aside-content 요소는 크게 세 개의 div 자식요소로 구성되어 있다. 
++ Scedule 부분에서 .aside-content 요소는 크게 세 개의 자식요소(div)로 구성되어 있다. 
 
 ```css
 .aside-name > p:hover {
     transform: scale(0.95);
     cursor: pointer;}
 ```
-+ .aside-name 요소의 자식요소 중 p요소가 hover일 때 0.95배 축소되고 마우스 커서가 바뀌도록 하였다.
++ .aside-name 요소의 자식요소 중 p요소가 hover일 때 p요소의 크기가 0.95배 축소되고 마우스 커서도 바뀌도록 설정하였다.
 ---
 ### <갤러리 페이지 코드 설명>
 
@@ -276,14 +275,12 @@
         <div class="face"></div>
         <div class="face"></div>
         <div class="face"></div>
-        <div class="face"></div>
-        <div class="face"></div>
         <div><p>마우스를 올려보세요.</p></div>
     </div>
     ...
 </div>
 ```
-+ .main-photo의 자식 요소들 중 두번째 요소에 대해서는 입체적인 형태로 만들기 위해 네 개의 .face 요소가 포함된 .wrapper 요소를 포함시켰다.
++ .main-photo의 자식 요소들 중 두번째 .photo-frame 요소에 대해서는 입체적인 도형을 포함시키기 위해 네 개의 .face 요소가 포함된 .wrapper 요소를 포함하였다.
 
 
  ### 2) 갤러리 페이지의 css코드
@@ -390,23 +387,17 @@
 .wrapper:hover {
     animation: cube-rotate 5s linear;
 }
-
 ```
 + cube-rotate 애니메이션: transform에 rotateY()함수를 이용하여 처음 Y축에 대해 0도 만큼 회전하는 것으로 시작해 마지막에 Y축을 기준으로 360도까지 회전하는 애니메이션을 만들었다.
 
 + 위 애니메이션을 .wrapper요소에 적용시켰는데 5초 동안 지속되도록 5s값을 설정하고 일정한 속도로 변화하도록 linear값을 설정하였다. 
 
 ```css
-.face:nth-child(1){
-    ...
-    opacity: 0.4;
-}
+.face:nth-child(1) { ...; opacity: 0.4;}
 ...
-.wrapper:hover .face:nth-child(1) {
-    opacity: 1;
-}
+.wrapper:hover .face:nth-child(1) { opacity: 1; }
 ```
-+ .face요소들 중 첫 요소(화면에 보이는 윗면)에 대해 opacity속성을 0.4로 설정하여 흐리게 보이도록 설정하였다.
++ .face 요소들 중 첫 요소(화면에 보이는 윗면)에 대해 opacity속성을 0.4로 설정하여 흐리게 보이도록 설정하였다.
 
 + .wrapper요소가 hover 되었을 때 .face 요소의 첫번째 요소가 선명하게 보이도록 opacity 속성에 1속성값을 설정하였다.
 
@@ -414,10 +405,10 @@
 ---
 - 본 과제에서 transition 속성, transform 속성, animation 속성을 홈페이지에 직접 적용시켜 봄으로써 각 속성이 언제 쓰이고 어떻게 사용되는지를 확실하게 알 수 있었다. 
 
-- 또한 이런 속성들을 응용하여 갤러리 페이지와 회전하는 입체 도형을 만들고, 헤더 이미지 등 원래 요소에 적용한 후 이전보다 더 생동감 있는 홈페이지가 된 것 같다. 
+- 또한 이런 속성들을 응용하여 갤러리 페이지와 회전하는 입체 도형 등을 만들고, 헤더 이미지 등의 원래 요소에 적용한 후 이전보다 더 생동감 있는 홈페이지가 된 것 같다. 
 
-- 3d transform 속성을 처음에 이해하기 어려웠는데 직접 이 속성을 활용하여 입체 도형을 만들어봄으로써 x, y, z 축으로의 이동과 회전에 대해 이해할 수 있었다.
+- 처음에는 3d transform 속성을 이해하기 어려웠는데 직접 3d transform 속성을 활용하여 입체 도형을 만들어봄으로써 x, y, z 축으로의 이동과 회전에 대해 이해할 수 있었다.
 
-- 앞으로 홈페이지에 transition, transform, animation 속성을 어떻게 더 활용할 수 있을지 고민해보고 알아볼 필요가 있다. 
+- 앞으로 홈페이지에 transition 속성, transform 속성, animation 속성을 어떻게 더 활용할 수 있을지 고민해보고 알아볼 필요가 있다. 
 
 
