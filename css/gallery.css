@@ -245,7 +245,6 @@ header div {
 
 .face:nth-child(1){
     transform: rotateY(0deg) translate3d(0px,0px, 125px);
-    background-color: red;
     background-image: url(../images/heart01.jpg);
     background-size: contain;
     background-position: center;
@@ -256,7 +255,6 @@ header div {
     width: 250px;
     height:250px;
     transform: rotateY(90deg) translate3d(0px, 0px, 255px);
-    background-color: green;
     background-image: url(../images/water01.jpg);
     background-size: cover;
     background-position: center;
@@ -264,7 +262,6 @@ header div {
 
 .face:nth-child(3){
     transform: rotateY(180deg) translate3d(0px, 0px, 125px);
-    background-color:blue;
     background-image: url(../images/sunset02.jpg);
     background-size: cover;
     background-position: center;
@@ -274,7 +271,6 @@ header div {
     width: 250px;
     height:250px;
     transform: rotateY(270deg) translate3d(0px, 0px, 125px);
-    background-color: yellow;
     background-image: url(../images/bear01.jpg);
     background-size: cover;
     background-position: center;
