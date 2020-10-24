@@ -322,7 +322,93 @@
     transform: scale(2) ;
 }
 ```
-+ 
++ transform 속성과 scale()함수를 이용하여 .photo-frame 요소가 active 상태 일 때 그 자식요소인 img요소가 2배로 확대되도록 하였다.
+
+
+```css
+.wrapper{
+    position: relative;
+    transform-style: preserve-3d;
+}
+.face{
+    width: 380px;
+    height: 250px;
+    position: absolute;
+    left:0;
+    top:0;
+    backface-visibility: hidden;
+}
+```
++ 네 개의 .face 요소가 포함된 .wrapper 요소는 position 속성을 relative로 선택하고, .face 요소들은 absolute로 선택하여 .face 요소들이 부모 요소인 .wrapper에 대해 위치가 설정되도록 하였다.
+
++ .wrapper 요소는 transform-style에 대해 preserve-3d 속성값을 설정하여 자식 요소들에도 transform 속성이 적용되도록 하였다.
+
++ .face의 요소는 너비와 높이를 380px, 250px로 설정하여 직사각형이 되게 하였고, backface-visibility 속성에 hidden 값을 설정하여 뒷면이 보이지 않도록 하였다.
+
+```css
+.face:nth-child(1){
+    transform: rotateY(0deg) translate3d(0px,0px, 125px);
+    background-image: url(../images/heart01.jpg);
+    background-size: contain;
+    background-position: center;
+    opacity: 0.4;
+}
+.face:nth-child(2){
+    width: 250px;
+    height:250px;
+    transform: rotateY(90deg) translate3d(0px, 0px, 255px);
+    background-image: url(../images/water01.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.face:nth-child(3){
+    transform: rotateY(180deg) translate3d(0px, 0px, 125px);
+    background-image: url(../images/sunset02.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.face:nth-child(4){
+    width: 250px;
+    height:250px;
+    transform: rotateY(270deg) translate3d(0px, 0px, 125px);
+    background-image: url(../images/bear01.jpg);
+    background-size: cover;
+    background-position: center;
+}
+```
++ 4개의 .face 요소들 중 2번째, 4번째 요소에 대해서는 너비와 높이를 250px(.face 요소의 높이가 250px이므로 250px로 설정)로 설정하여 정사각형이 되게 하였고 각 .face 요소들에 대해 다르게 회전시켜 앞면, 뒷면이 없는 입체 직사각형을 만들었다. 
+
++ background-image 속성을 이용해 각 면에 대해 다른 이미지 배경을 설정하였고 배경 크기와 위치에 대해 cover, center 속성값을 설정하여 이미지 전체가 보이도록, 가운데로 위치하도록 하였다.
+
+```css
+@keyframes cube-rotate {
+    0%{transform:rotateY(0deg); }
+    25%{transform:rotateY(90deg);}
+    50%{transform:rotateY(180deg);}
+    100%{transform:rotateY(360deg);}
+}
+.wrapper:hover {
+    animation: cube-rotate 5s linear;
+}
+
+```
++ cube-rotate 애니메이션: transform에 rotateY()함수를 이용하여 처음 Y축에 대해 0도 만큼 회전하는 것으로 시작해 마지막에 Y축을 기준으로 360도까지 회전하는 애니메이션을 만들었다.
+
++ 위 애니메이션을 .wrapper요소에 적용시켰는데 5초 동안 지속되도록 5s값을 설정하고 일정한 속도로 변화하도록 linear값을 설정하였다. 
+
+```css
+.face:nth-child(1){
+    ...
+    opacity: 0.4;
+}
+...
+.wrapper:hover .face:nth-child(1) {
+    opacity: 1;
+}
+```
++ .face요소들 중 첫 요소(화면에 보이는 윗면)에 대해 opacity속성을 0.4로 설정하여 흐리게 보이도록 설정하였다.
+
++ .wrapper요소가 hover 되었을 때 .face 요소의 첫번째 요소가 선명하게 보이도록 opacity 속성에 1속성값을 설정하였다.
 
 ## 비교 및 고찰
 ---
