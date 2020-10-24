@@ -75,7 +75,7 @@
    + side-menu라는 id를 가진 요소의 자식 요소 중 ul 요소에 대해 list-style, text-align 속성을 이용하여 리스트 왼쪽에 점을 없앴고 오른쪽 정렬이 되도록 하였다.
 ---
 
-### 2) 헤더이미지 (html과 css코드)
+### 2) 헤더이미지 위 글자와 애니메이션 (html과 css코드)
 ```html
 <div class="header-image">
     <div class="header-animation">
@@ -87,7 +87,7 @@
     ...
 </div>
 ```
-+ .header-image 요소 내에 .header-animation 요소가 있고 .header-animation 요소는 4개의 div 자식 요소들로 이루어져 있다.
++ .header-image 요소 내에 .header-animation 요소가 있고 .header-animation 요소는 4개의 .header-circle 요소들로 이루어져 있다.
 
 ```css
 @keyframes circle {
@@ -124,8 +124,6 @@
 
 + 이 애니메이션을 헤더 이미지 위에 글자들에 적용하였고 2.5초 동안 지속되도록 설정하였다.
 ---
-
-
 
 ### 3) Main Photo (html코드와 css코드)
 ```html
