@@ -18,7 +18,7 @@
 
 - 홈 페이지에서도 Photo 부분에 포함된 사진들에 대해 확대되고 회전되는 효과를 추가하였다.(2D transform, 애니메이션 속성 이용) 오른쪽에 더보기 홈버튼도 추가하였다.
 
-- 홈 화면의 헤더이미지 위 글자에 애니메이션을 추가하였다.
+- 홈 화면의 헤더이미지에 보이는 글자에 애니메이션을 적용했고, 글자 위에 애니메이션을 추가했다.
 
 
 ## 2. 수정·추가 사항에 대한 코드 설명
@@ -75,7 +75,38 @@
    + side-menu라는 id를 가진 요소의 자식 요소 중 ul 요소에 대해 list-style, text-align 속성을 이용하여 리스트 왼쪽에 점을 없앴고 오른쪽 정렬이 되도록 하였다.
 ---
 
-### 2) 헤더이미지 (css코드)
+### 2) 헤더이미지 (html과 css코드)
+```html
+<div class="header-image">
+    <div class="header-animation">
+        <div class="header-circle"></div>
+        <div class="header-circle"></div>
+        <div class="header-circle"></div>
+        <div class="header-circle"></div>
+    </div>
+    ...
+</div>
+```
++ .header-image 요소 내에 .header-animation 요소가 있고 .header-animation 요소는 4개의 div 자식 요소들로 이루어져 있다.
+
+```css
+@keyframes circle {
+    0%{transform: translateY(0px);}
+    40%{opacity: 0.6;}
+    60%{transform: translateY(-80px); opacity:0.2;}
+    100%{transform: translateY(0px); opacity:1;}
+}
+.header-circle{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    ...
+    animation:circle 2s 0s 5 ease-out;	
+}
+```
++ circle 애니메이션: 60%일 때 Y축으로 -80px까지 이동하고 희미해지다가 마지막에는 원래 위치로 돌아오고 선명해지는 애니메이션을 만들었다.
+
++ .header-circle 요소에 대해 너비와 높이를 15px로 설정하고, border-radius속성을 50%값으로 설정하여 원의 형태를 만들었다. animation 속성을 이용하여 위 애니메이션이 2초 동안 재생되고 5번 반복되도록 적용시켰다.
 
 ```css
 @keyframes slide {
@@ -93,6 +124,8 @@
 
 + 이 애니메이션을 헤더 이미지 위에 글자들에 적용하였고 2.5초 동안 지속되도록 설정하였다.
 ---
+
+
 
 ### 3) Main Photo (html코드와 css코드)
 ```html
