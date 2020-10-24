@@ -145,6 +145,7 @@ header div {
     padding: 150px 10px 20px 20px;
     background-color: rgba(46, 41, 44, 0.3);
     background-blend-mode: overlay;
+    position: relative;
 }
 
 .main-name > h3 {
@@ -193,6 +194,55 @@ header div {
 .photo-frame:active img{
     transform: scale(2) ;
 }
+
+@keyframes slide {
+    from {right: -50%; opacity: 0.5; }
+    to {right:100px; opacity: 1; }
+} 
+
+.header-image > h4{
+    color:#ffebf2;
+    font-size:20px;
+    top: 50px;
+    right: 100px;
+    animation: slide 2.5s ;
+}
+
+.header-image p{
+    color:#e9dde1;
+    top: 95px;
+    right: 100px;
+    width: 35%;
+    text-align: right;
+    animation: slide 2.5s ;
+}
+
+@keyframes circle {
+    0%{transform: translateY(0px);}
+    40%{opacity: 0.6;}
+    60%{transform: translateY(-80px); opacity:0.2;}
+    100%{transform: translateY(0px); opacity:1;}
+}
+
+.header-animation {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    left: 1.5%;
+}
+
+.header-circle{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    margin-right: 5px;
+    background: rgb(214, 64, 97) ;
+    animation:circle 2s 0s 5 ease-out;	
+}
+
+.header-circle:nth-child(2){animation-delay: 0.2s; background: rgb(219, 163, 98) ;}
+.header-circle:nth-child(3){animation-delay: 0.3s; background:  rgb(229, 108, 240) ;}
+.header-circle:nth-child(4){animation-delay: 0.4s; background: rgb(128, 162, 255) ;}
 
 /* ----------------------------- 입체 사각형 css 시작 ---------------------------- */
 .wrapper{

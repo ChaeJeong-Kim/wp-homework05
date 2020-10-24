@@ -199,6 +199,33 @@ header > nav div {
     animation: slide 2.5s ;
 }
 
+@keyframes circle {
+    0%{transform: translateY(0px);}
+    40%{opacity: 0.6;}
+    60%{transform: translateY(-80px); opacity:0.2;}
+    100%{transform: translateY(0px); opacity:1;}
+}
+
+.header-animation {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 88%;
+}
+
+.header-circle{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    margin-right: 5px;
+    background: rgb(214, 64, 97) ;
+    animation:circle 2s 0s 5 ease-out;	
+}
+
+.header-circle:nth-child(2){animation-delay: 0.2s; background: rgb(219, 163, 98) ;}
+.header-circle:nth-child(3){animation-delay: 0.3s; background:  rgb(229, 108, 240) ;}
+.header-circle:nth-child(4){animation-delay: 0.4s; background: rgb(128, 162, 255) ;}
+
 /* --------------------------메인 css시작---------------------- */
 
 .main-name {
