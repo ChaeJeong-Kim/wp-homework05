@@ -169,9 +169,6 @@ header div {
     padding: 10px;
     overflow: hidden;
     background-color: white;
-}
-
-.photo-frame{
     text-align: center;
 }
 
@@ -189,9 +186,8 @@ header div {
 }
 
 .photo-frame >  img {
-    width: auto;height:auto;
     max-height: 75%;
-    min-width: 48%; max-width: 100%;
+    max-width: 100%;
 }
 
 .photo-frame:active img{
